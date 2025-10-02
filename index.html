@@ -6,7 +6,8 @@
   <title>Etunimi Sukunimi — Osaamisportfolio</title>
   <style>
     :root{
-      --accent:#0b63ff;
+      --accent1:#4B0082; /* tumman liila */
+      --accent2:#1A237E; /* tumman sininen */
       --bg:#f7f8fb;
       --card:#ffffff;
       --muted:#6b7280;
@@ -16,7 +17,7 @@
     body{margin:0;background:var(--bg);color:#111;line-height:1.4}
     .wrap{max-width:920px;margin:40px auto;padding:28px}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#7ab3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
     h1{margin:0;font-size:22px}
     p.lead{margin:8px 0 0;color:var(--muted)}
     .card{background:var(--card);border-radius:var(--radius);padding:18px;margin-top:20px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
@@ -25,13 +26,12 @@
     .skills .skill{margin-bottom:12px}
     .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
     .bar{height:10px;background:#e6e9f0;border-radius:999px;margin-top:8px;overflow:hidden}
-    .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7ab3ff)}
+    .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2))}
     .projects .proj{border-radius:10px;padding:12px;margin-bottom:12px;background:#fbfdff;border:1px solid #eef3ff}
-    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent1);color:white;text-decoration:none;font-weight:600}
     .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
     @media (max-width:620px){.wrap{padding:18px}}
-    /* light animations */
     .fade{opacity:0;transform:translateY(6px);animation:fadeIn .5s forwards}
     @keyframes fadeIn{to{opacity:1;transform:none}}
   </style>
@@ -52,77 +52,4 @@
 
     <section class="card fade" style="animation-delay:0.05s;margin-top:20px">
       <div class="row">
-        <div class="col">
-          <h3>Osaaminen</h3>
-          <div class="skills">
-            <div class="skill">
-              <div class="meta"><span>Viestotekniikka</span><span>Erinomainen</span></div>
-              <div class="bar"><i style="width:92%"></i></div>
-            </div>
-            <div class="skill">
-              <div class="meta"><span>Tiimijohtaminen</span><span>Hyvä</span></div>
-              <div class="bar"><i style="width:76%"></i></div>
-            </div>
-            <div class="skill">
-              <div class="meta"><span>Vianetsintä & huolto</span><span>Hyvä</span></div>
-              <div class="bar"><i style="width:80%"></i></div>
-            </div>
-            <div class="skill">
-              <div class="meta"><span>Ohjelmointi / Skriptit</span><span>Perus–Hyvä</span></div>
-              <div class="bar"><i style="width:60%"></i></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col">
-          <h3>Avainluvut</h3>
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>5+ viikkoa palvelusta signaalijoukoissa — vastuutehtäviä, viestiasennuksia</li>
-            <li>Johtamisharjoituksia / pienryhmän vetäminen</li>
-            <li>Urheilu: kilpailu- ja harjoitustausta (tricking) — kurinalaisuus ja paineensietokyky</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="card fade projects" style="animation-delay:0.1s">
-      <h3>Projektit & esimerkit</h3>
-
-      <div class="proj">
-        <strong>Viestoyksikön harjoitustoteutus</strong>
-        <p style="margin:6px 0;color:var(--muted)">Laadin ja toteutin viestiasennukseen liittyvän harjoituspaketin (suunnittelu, testaus, palautekierros). </p>
-        <a href="#" onclick="alert('Lisää linkkejä ja kuvia tähän projektiin.');return false">Katso lisätiedot →</a>
-      </div>
-
-      <div class="proj">
-        <strong>Työkaluskripti signaalilaitteisiin</strong>
-        <p style="margin:6px 0;color:var(--muted)">Pieni skripti, joka automatisoi laitemittausten keruun ja raportin luonnin.</p>
-        <a href="#" onclick="alert('Lisää GitHub-linkki tai tiedostot.');return false">Katso koodi →</a>
-      </div>
-
-      <p style="margin-top:8px;color:var(--muted)">Voit lisätä GitHub-, GitLab- tai demo-linkin jokaiseen projektiin.</p>
-    </section>
-
-    <section class="card fade" id="contact" style="animation-delay:0.15s">
-      <h3>Yhteystiedot</h3>
-      <p style="margin:6px 0;color:var(--muted)">
-        Sähköposti: <strong>sinun.sposti@example.com</strong><br>
-        Puhelin: <strong>+358 40 123 4567</strong><br>
-        LinkedIn / GitHub: lisää linkit alle
-      </p>
-
-      <div style="margin-top:12px">
-        <a class="cta" href="mailto:sinun.sposti@example.com">Lähetä sähköposti</a>
-      </div>
-    </section>
-
-    <footer class="fade" style="animation-delay:0.18s">
-      © <span id="year"></span> Etunimi Sukunimi — Korvaa omilla tiedoilla
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
